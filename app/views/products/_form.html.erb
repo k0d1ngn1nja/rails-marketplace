@@ -1,23 +1,38 @@
 <%= form_for @product, html: {multipart: true} do |f| %>
 	<div class="col-sm-6">
 		<div class="form-group">
+			<%= f.label :title, 'Product Name' %>
 			<%= f.text_field :title, autofocus: true, class: 'form-control', placeholder: 'Enter Product Name' %>
 		</div>
 	</div><!--col6-->
 
 	<div class="col-sm-6">
 		<div class="form-group">
+		<%= f.label :title, 'Product Price' %>
 			<%= f.text_field :price, autofocus: true, class: 'form-control', placeholder: 'Enter Product Price' %>
 		</div>
 	</div><!--col6-->
 
 	<div class="col-sm-12">
 		<div class="form-group">
+		<%= f.label :title, 'Product Description' %>
 			<%= f.text_area :description, rows: 5, autofocus: true, class: 'form-control', placeholder: 'Enter Product Description' %>
 		</div>
-	</div><!--col6-->
+	</div><!--col12-->
 	
 	<div class="col-sm-12">
-		<%= f.submit (@product.new_record? ? 'Add Listing' : 'Update Listing'), class:'btn btn-primary' %>
+		<div class="form-group">
+    	<%= file_field_tag 'images[]', type: :file, multiple: true %>
+		</div>
 	</div>
+
+	<div class="col-sm-12">
+		<%= f.submit (@product.new_record? ? 'Add Listing' : 'Update Listing'), class:'btn btn-primary' %> <br><br>
+		<%= link_to 'Back', :back %>
+	</div>
+
+	<div id="product-photos">
+		<%= render 'photos/list' %>
+	</div>
+
 <% end %>

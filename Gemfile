@@ -10,6 +10,8 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 # ==========================
 gem 'bootstrap-sass', '~> 3.3.6'
+gem "paperclip", "~> 5.0.0"
+gem "font-awesome-rails"
 
 
 group :development, :test do

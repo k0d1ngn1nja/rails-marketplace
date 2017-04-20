@@ -1,0 +1,18 @@
+<% if @photos %>
+	<% @photos.each_slice(4) do |slice| %>
+		<div class="col-sm-3">
+			<% slice.each do |photo| %>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<%= image_tag photo.image.url(), class: 'img-responsive' %>
+					</div><!--/heading-->
+					<div class="panel-body">
+						<span class="pull-right">
+							<i class="fa fa-times fa-lg"></i>
+						</span>
+					</div>
+				</div><!--/panel-->
+			<% end %>
+		</div>
+	<% end %>
+<% end %>

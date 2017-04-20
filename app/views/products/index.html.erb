@@ -11,7 +11,17 @@
 			  	</tr>
 			  </thead>
 			  <tbody>
-			  	<tr></tr>
+			  	<% @products.each do |p| %>
+			  	<tr>
+			  		<td><%= p.title %></td>
+			  		<td><%= truncate(p.description, length: 50) %></td>
+			  		<td><%= p.price %></td>
+			  		<td>
+			  			<%= link_to 'Edit', edit_product_path(p), class: 'btn btn-info btn-small' %> | 
+			  			<%= link_to 'view', product_path(p), class: 'btn btn-info btn-small' %>
+			  		</td>
+			  	</tr>
+			  	<% end %>
 			  </tbody>
 			</table>
 		</div><!--/col12-->
