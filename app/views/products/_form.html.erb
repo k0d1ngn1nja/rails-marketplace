@@ -1,0 +1,23 @@
+<%= form_for @product, html: {multipart: true} do |f| %>
+	<div class="col-sm-6">
+		<div class="form-group">
+			<%= f.text_field :title, autofocus: true, class: 'form-control', placeholder: 'Enter Product Name' %>
+		</div>
+	</div><!--col6-->
+
+	<div class="col-sm-6">
+		<div class="form-group">
+			<%= f.text_field :price, autofocus: true, class: 'form-control', placeholder: 'Enter Product Price' %>
+		</div>
+	</div><!--col6-->
+
+	<div class="col-sm-12">
+		<div class="form-group">
+			<%= f.text_area :description, rows: 5, autofocus: true, class: 'form-control', placeholder: 'Enter Product Description' %>
+		</div>
+	</div><!--col6-->
+	
+	<div class="col-sm-12">
+		<%= f.submit (@product.new_record? ? 'Add Listing' : 'Update Listing'), class:'btn btn-primary' %>
+	</div>
+<% end %>
