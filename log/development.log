@@ -114,3 +114,92 @@ Processing by StaticPagesController#about as HTML
 Completed 200 OK in 658ms (Views: 655.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/about" for ::1 at 2017-04-20 17:18:34 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial partials/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/web-dev/Desktop/PORTFOLIO PROJECTS/Rails_projects/marketplace/app/views"
+):
+     8: </head>
+     9: <body>
+    10: 	
+    11: 	<%= render 'partials/navbar' %>
+    12: 	<%= yield %>
+    13: 	
+    14: </body>
+  
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___1068329354181758577_70274128974780'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.4ms)
+Started GET "/about" for ::1 at 2017-04-20 17:18:58 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.3ms)
+  Rendered partials/_navbar.html.erb (176.4ms)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x007fd3ee306988>:0x007fd3f0ff1600>
+Did you mean?  font_path):
+     7:         <span class="icon-bar"></span>
+     8:         <span class="icon-bar"></span>
+     9:       </button>
+    10:       <%= link_to 'Rails Marketplace', root_path, class: 'navbar-brand' %>
+    11:     </div>
+    12:     <div id="navbar" class="collapse navbar-collapse">
+    13:       <ul class="nav navbar-nav">
+  
+app/views/partials/_navbar.html.erb:10:in `_app_views_partials__navbar_html_erb___633595204182066559_70274128611500'
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___1068329354181758577_70274098490940'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.4ms)
+Started GET "/about" for ::1 at 2017-04-20 17:21:41 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-20 17:21:45 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered partials/_navbar.html.erb (2.4ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2017-04-20 17:21:46 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.5ms)
+  Rendered partials/_navbar.html.erb (0.5ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2017-04-20 17:21:46 +0100
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.4ms)
+  Rendered partials/_navbar.html.erb (0.5ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
