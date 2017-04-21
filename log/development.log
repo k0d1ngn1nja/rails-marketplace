@@ -1761,3 +1761,398 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for ::1 at 2017-04-21 18:44:20 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (12.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+  Rendered partials/_navbar.html.erb (1.4ms)
+Completed 200 OK in 484ms (Views: 481.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-21 18:44:23 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (11.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered products/index.html.erb within layouts/application (98.7ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+Completed 200 OK in 190ms (Views: 148.5ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/products" for ::1 at 2017-04-21 18:46:45 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered products/index.html.erb within layouts/application (6.5ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 18:46:47 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 18:47:11 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+Completed 200 OK in 2028ms (Views: 2026.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 18:47:18 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+Completed 200 OK in 1982ms (Views: 1980.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 18:47:24 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered partials/_navbar.html.erb (7.0ms)
+Completed 200 OK in 1845ms (Views: 1843.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 18:52:41 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered static_pages/home.html.erb within layouts/application (25.0ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+Completed 200 OK in 68ms (Views: 57.7ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 18:52:55 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/web-dev/Desktop/PORTFOLIO PROJECTS/Rails_projects/marketplace/app/views/static_pages/home.html.erb:26: syntax error, unexpected ',', expecting ')'
+...:thumb) if p.photos.length > 0, class:'img-responsive' );@ou...
+...                               ^):
+  
+app/views/static_pages/home.html.erb:26: syntax error, unexpected ',', expecting ')'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.6ms)
+Started GET "/" for ::1 at 2017-04-21 18:53:02 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/web-dev/Desktop/PORTFOLIO PROJECTS/Rails_projects/marketplace/app/views/static_pages/home.html.erb:26: syntax error, unexpected keyword_class, expecting ')'
+...b) if p.photos.length > 0 class:'img-responsive' );@output_b...
+...                               ^
+/Users/web-dev/Desktop/PORTFOLIO PROJECTS/Rails_projects/marketplace/app/views/static_pages/home.html.erb:26: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...th > 0 class:'img-responsive' );@output_buffer.safe_append='
+...                               ^
+/Users/web-dev/Desktop/PORTFOLIO PROJECTS/Rails_projects/marketplace/app/views/static_pages/home.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;		 end 
+         		    ^
+/Users/web-dev/Desktop/PORTFOLIO PROJECTS/Rails_projects/marketplace/app/views/static_pages/home.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/web-dev/Desktop/PORTFOLIO PROJECTS/Rails_projects/marketplace/app/views/static_pages/home.html.erb:38: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/static_pages/home.html.erb:26: syntax error, unexpected keyword_class, expecting ')'
+app/views/static_pages/home.html.erb:26: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/static_pages/home.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+app/views/static_pages/home.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/static_pages/home.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.6ms)
+Started GET "/" for ::1 at 2017-04-21 18:53:25 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered static_pages/home.html.erb within layouts/application (5.1ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 18:55:30 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered static_pages/home.html.erb within layouts/application (31.9ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+Completed 200 OK in 71ms (Views: 67.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 18:55:38 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered static_pages/home.html.erb within layouts/application (5.4ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 18:56:25 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered static_pages/home.html.erb within layouts/application (9.8ms)
+  Rendered partials/_navbar.html.erb (1.2ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 18:56:34 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered static_pages/home.html.erb within layouts/application (6.4ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 18:56:39 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered static_pages/home.html.erb within layouts/application (6.7ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+Completed 200 OK in 54ms (Views: 51.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 18:58:34 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (1.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered static_pages/home.html.erb within layouts/application (10.9ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+Completed 200 OK in 63ms (Views: 59.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 18:58:53 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered static_pages/home.html.erb within layouts/application (10.5ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/2" for ::1 at 2017-04-21 18:59:09 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered photos/_list.html.erb (4.9ms)
+  Rendered products/show.html.erb within layouts/application (8.8ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+Completed 200 OK in 64ms (Views: 54.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/2" for ::1 at 2017-04-21 19:06:59 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered photos/_list.html.erb (11.3ms)
+  Rendered products/show.html.erb within layouts/application (13.0ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 61.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/2" for ::1 at 2017-04-21 19:07:01 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered photos/_list.html.erb (3.2ms)
+  Rendered products/show.html.erb within layouts/application (5.0ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+Completed 200 OK in 57ms (Views: 50.9ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/photos/2" for ::1 at 2017-04-21 19:07:03 +0100
+Processing by PhotosController#destroy as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+[paperclip] deleting /Users/web-dev/Desktop/PORTFOLIO PROJECTS/Rails_projects/marketplace/public/system/photos/images/000/000/002/original/ronaldo.jpg
+[paperclip] deleting /Users/web-dev/Desktop/PORTFOLIO PROJECTS/Rails_projects/marketplace/public/system/photos/images/000/000/002/medium/ronaldo.jpg
+[paperclip] deleting /Users/web-dev/Desktop/PORTFOLIO PROJECTS/Rails_projects/marketplace/public/system/photos/images/000/000/002/thumb/ronaldo.jpg
+No template found for PhotosController#destroy, rendering head :no_content
+Completed 204 No Content in 72ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/products/2" for ::1 at 2017-04-21 19:08:51 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered photos/_list.html.erb (2.2ms)
+  Rendered products/show.html.erb within layouts/application (4.9ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for ::1 at 2017-04-21 19:08:53 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered products/index.html.erb within layouts/application (6.2ms)
+  Rendered partials/_navbar.html.erb (1.1ms)
+Completed 200 OK in 63ms (Views: 59.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/2/edit" for ::1 at 2017-04-21 19:08:56 +0100
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered photos/_list.html.erb (1.9ms)
+  Rendered products/_form.html.erb (22.0ms)
+  Rendered products/edit.html.erb within layouts/application (25.1ms)
+  Rendered partials/_navbar.html.erb (1.2ms)
+Completed 200 OK in 87ms (Views: 81.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/products/2" for ::1 at 2017-04-21 19:09:12 +0100
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1hBUp3cqnxKXhLaeu4FNyrYuyUuiuKMRUFWptiRJhik8MSjllyU6loxsvNwkXaLxJSRYjnjZpD63zOO45RQc/Q==", "product"=>{"title"=>"Test Product 1", "price"=>"25.45", "description"=>"adknfvakn ion[oi adofoivooom"}, "images"=>[#<ActionDispatch::Http::UploadedFile:0x007fb5a919c3f8 @tempfile=#<Tempfile:/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/RackMultipart20170421-74576-9j3vn2.jpg>, @original_filename="ronaldo.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"ronaldo.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007fb5a919c3d0 @tempfile=#<Tempfile:/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/RackMultipart20170421-74576-9s0yky.jpg>, @original_filename="Michael_Buble.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"Michael_Buble.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"Update Listing", "id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/c5aa3124b1adad080927ce4d144c6b3320170421-74576-w5rgsu.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/c5aa3124b1adad080927ce4d144c6b3320170421-74576-82vtoa.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/c5aa3124b1adad080927ce4d144c6b3320170421-74576-82vtoa.jpg[0]'
+Command :: convert '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/c5aa3124b1adad080927ce4d144c6b3320170421-74576-82vtoa.jpg[0]' -auto-orient -resize "250x250>" '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/e073db12bf700d607f5bf34f14fcf18c20170421-74576-11lcbtj'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/c5aa3124b1adad080927ce4d144c6b3320170421-74576-82vtoa.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/c5aa3124b1adad080927ce4d144c6b3320170421-74576-82vtoa.jpg[0]'
+Command :: convert '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/c5aa3124b1adad080927ce4d144c6b3320170421-74576-82vtoa.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/e073db12bf700d607f5bf34f14fcf18c20170421-74576-tup4wl'
+Command :: file -b --mime '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/c5aa3124b1adad080927ce4d144c6b3320170421-74576-orsjzu.jpg'
+  [1m[35mSQL (13.1ms)[0m  [1m[32mINSERT INTO "photos" ("product_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["product_id", 2], ["created_at", 2017-04-21 18:09:13 UTC], ["updated_at", 2017-04-21 18:09:13 UTC], ["image_file_name", "ronaldo.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 27053], ["image_updated_at", 2017-04-21 18:09:12 UTC]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Command :: file -b --mime '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/820b4ea3d45c330ca5a697d095f1323d20170421-74576-1izjdn6.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/820b4ea3d45c330ca5a697d095f1323d20170421-74576-1bbclcb.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/820b4ea3d45c330ca5a697d095f1323d20170421-74576-1bbclcb.jpg[0]'
+Command :: convert '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/820b4ea3d45c330ca5a697d095f1323d20170421-74576-1bbclcb.jpg[0]' -auto-orient -resize "250x250>" '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/28d7543f48e9f6d20fea5029e76d8b3e20170421-74576-1hbjl1v'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/820b4ea3d45c330ca5a697d095f1323d20170421-74576-1bbclcb.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/820b4ea3d45c330ca5a697d095f1323d20170421-74576-1bbclcb.jpg[0]'
+Command :: convert '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/820b4ea3d45c330ca5a697d095f1323d20170421-74576-1bbclcb.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/28d7543f48e9f6d20fea5029e76d8b3e20170421-74576-1ijmje5'
+Command :: file -b --mime '/var/folders/cj/vjybx47x11z851zbddmz1zmm0000gp/T/820b4ea3d45c330ca5a697d095f1323d20170421-74576-9uqp7.jpg'
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("product_id", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["product_id", 2], ["created_at", 2017-04-21 18:09:13 UTC], ["updated_at", 2017-04-21 18:09:13 UTC], ["image_file_name", "Michael_Buble.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 178145], ["image_updated_at", 2017-04-21 18:09:13 UTC]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 498ms (ActiveRecord: 26.6ms)
+
+
+Started GET "/products/2" for ::1 at 2017-04-21 19:09:13 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered photos/_list.html.erb (4.3ms)
+  Rendered products/show.html.erb within layouts/application (7.1ms)
+  Rendered partials/_navbar.html.erb (1.2ms)
+Completed 200 OK in 87ms (Views: 82.9ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/photos/3" for ::1 at 2017-04-21 19:09:38 +0100
+Processing by PhotosController#destroy as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "photos" WHERE "photos"."id" = $1[0m  [["id", 3]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+[paperclip] deleting /Users/web-dev/Desktop/PORTFOLIO PROJECTS/Rails_projects/marketplace/public/system/photos/images/000/000/003/original/ronaldo.jpg
+[paperclip] deleting /Users/web-dev/Desktop/PORTFOLIO PROJECTS/Rails_projects/marketplace/public/system/photos/images/000/000/003/medium/ronaldo.jpg
+[paperclip] deleting /Users/web-dev/Desktop/PORTFOLIO PROJECTS/Rails_projects/marketplace/public/system/photos/images/000/000/003/thumb/ronaldo.jpg
+  Rendering photos/destroy.js.erb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered photos/_list.html.erb (3.6ms)
+  Rendered photos/destroy.js.erb (6.9ms)
+Completed 200 OK in 27ms (Views: 12.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/products/2" for ::1 at 2017-04-21 19:11:57 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered photos/_list.html.erb (3.4ms)
+  Rendered products/show.html.erb within layouts/application (5.2ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+Completed 200 OK in 61ms (Views: 56.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 19:12:47 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered static_pages/home.html.erb within layouts/application (56.3ms)
+  Rendered partials/_navbar.html.erb (1.3ms)
+Completed 200 OK in 421ms (Views: 407.7ms | ActiveRecord: 6.9ms)
+
+

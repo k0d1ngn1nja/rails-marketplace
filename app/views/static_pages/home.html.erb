@@ -1,1 +1,45 @@
-<h1>Home Page</h1>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Welcome to Rails Market Place</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    
+    <%# unless user_signed_in? %>
+    <div style="margin-bottom: 20px;">
+    	<%#= link_to 'Signup', new_user_registration_path, class: 'btn btn-primary', :style => 'border-radius: 0' %>
+    </div>
+		<%# end %>
+    <div class="progress">
+		  <div class="progress-bar progress-bar-success" style="width: 35%"></div>
+		  <div class="progress-bar progress-bar-warning" style="width: 20%"></div>
+		  <div class="progress-bar progress-bar-danger" style="width: 15%"></div>
+		  <div class="progress-bar progress-bar-info" style="width: 15%"></div>
+		  <div class="progress-bar progress-bar-primary" style="width: 15%"></div>
+		</div>
+  </div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 class="page-header text-center">Products</h1>
+		</div>
+	</div><!--/row-->
+
+	<div class="row">
+		<% @products.each do |p| %>
+			<div class="col-sm-3">
+				<div class="thumbnail">
+		      <%= image_tag p.photos[0].image.url if p.photos.length > 0 %>
+		      <div class="caption">
+		        <h3><%= link_to p.title, p %></h3>
+		        <p><%= truncate(p.description, length: 70) %></p>
+		        <span class="pull-right">
+		        	<%= number_to_currency(p.price) %>
+		        </span>
+		        <br>
+		      </div>
+		    </div>
+			</div>
+		<% end %>
+	</div>
+</div>
