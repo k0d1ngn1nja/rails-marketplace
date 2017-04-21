@@ -1,3 +1,19 @@
-<h1>Product Show Page</h1>
+<br><br>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="thumbnail">
+				<%= image_tag @product.photos[0].image.url if @product.photos.length > 0 %>
+			</div>
+		</div><!--col6-->
 
-<%= render 'photos/list' %>
+		<div class="col-md-6">
+			<h2><%= @product.title %></h2>
+			<p><%= number_to_currency(@product.price) %></p>
+			<p><%= @product.description %></p>
+		</div><!--col6-->
+	</div>
+	<div class="row">
+		<%#= render 'photos/list' %>
+	</div>
+</div>

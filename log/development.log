@@ -2156,3 +2156,83 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 421ms (Views: 407.7ms | ActiveRecord: 6.9ms)
 
 
+Started GET "/products/2" for ::1 at 2017-04-21 19:22:06 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered photos/_list.html.erb (1.4ms)
+  Rendered products/show.html.erb within layouts/application (5.5ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+Completed 200 OK in 53ms (Views: 47.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/2" for ::1 at 2017-04-21 19:22:27 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered photos/_list.html.erb (1.5ms)
+  Rendered products/show.html.erb within layouts/application (7.0ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+Completed 200 OK in 74ms (Views: 69.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/2" for ::1 at 2017-04-21 19:22:29 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered photos/_list.html.erb (0.9ms)
+  Rendered products/show.html.erb within layouts/application (4.2ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+Completed 200 OK in 54ms (Views: 50.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/2" for ::1 at 2017-04-21 19:22:39 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (4.2ms)
+  Rendered partials/_navbar.html.erb (1.5ms)
+Completed 200 OK in 70ms (Views: 66.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/2" for ::1 at 2017-04-21 19:22:52 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (1.9ms)
+  Rendered partials/_navbar.html.erb (1.1ms)
+Completed 200 OK in 74ms (Views: 68.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/2" for ::1 at 2017-04-21 19:24:20 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered products/show.html.erb within layouts/application (9.9ms)
+  Rendered partials/_navbar.html.erb (1.0ms)
+Completed 200 OK in 56ms (Views: 51.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-04-21 19:28:23 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered static_pages/home.html.erb within layouts/application (7.7ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.8ms)
+
+
