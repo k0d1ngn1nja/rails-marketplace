@@ -1232,3 +1232,532 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 53ms (Views: 47.9ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/products" for ::1 at 2017-04-20 20:03:06 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  Rendered products/index.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Photo::ActiveRecord_Associations_CollectionProxy:0x007fadf472aa48>):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photos.image.url(:thumb) %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__1556733086927282196_70192553660460'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__1556733086927282196_70192553660460'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.3ms)
+Started GET "/products" for ::1 at 2017-04-20 20:03:13 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  Rendered products/index.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<Photo::ActiveRecord_Associations_CollectionProxy:0x007fadf70db540>
+Did you mean?  URI):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photos.url(:thumb) %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__1556733086927282196_70192575453800'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__1556733086927282196_70192575453800'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.0ms)
+Started GET "/products" for ::1 at 2017-04-20 20:03:36 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `photo' for #<Product:0x007fadf5aa5230>
+Did you mean?  photos
+               photos=):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photo.url(:thumb) %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__1556733086927282196_70192584491360'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__1556733086927282196_70192584491360'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.8ms)
+Started GET "/products" for ::1 at 2017-04-20 20:03:41 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `photo' for #<Product:0x007fadf5368468>
+Did you mean?  photos
+               photos=):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photo.image.url(:thumb) %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__1556733086927282196_70192547980720'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__1556733086927282196_70192547980720'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.8ms)
+Started GET "/products" for ::1 at 2017-04-20 20:03:49 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  Rendered products/index.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Photo::ActiveRecord_Associations_CollectionProxy:0x007faded4d9778>):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photos.image.url(:thumb) %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__1556733086927282196_70192592283940'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__1556733086927282196_70192592283940'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.1ms)
+Started GET "/products" for ::1 at 2017-04-20 20:04:00 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  Rendered products/index.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<Photo::ActiveRecord_Associations_CollectionProxy:0x007fadf05e26d0>
+Did you mean?  URI):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photos.url(:thumb) %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__1556733086927282196_70192489978280'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__1556733086927282196_70192489978280'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.2ms)
+Started GET "/products" for ::1 at 2017-04-20 20:05:19 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  Rendered products/index.html.erb within layouts/application (26.5ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Photo::ActiveRecord_Associations_CollectionProxy:0x007fadf5baa338>):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photos.image(:thumb) %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__1556733086927282196_70192601625780'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__1556733086927282196_70192601625780'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.4ms)
+Started GET "/products" for ::1 at 2017-04-20 20:05:27 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  Rendered products/index.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Photo::ActiveRecord_Associations_CollectionProxy:0x007fadf90971b8>):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photos.image.url(:thumb) %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__1556733086927282196_70192592118260'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__1556733086927282196_70192592118260'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.6ms)
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+Started GET "/products" for ::1 at 2017-04-20 20:06:18 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  Rendered products/index.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<Photo::ActiveRecord_Associations_CollectionProxy:0x007fadf7bd3768>
+Did you mean?  URI):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photos.url(:thumb) %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__1556733086927282196_70192563782280'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__1556733086927282196_70192563782280'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.7ms)
+Started GET "/products" for ::1 at 2017-04-20 20:06:28 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  Rendered products/index.html.erb within layouts/application (45.7ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 5.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<Photo::ActiveRecord_Associations_CollectionProxy:0x007fb318b89ae8>
+Did you mean?  URI):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photos.url(:thumb) %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__3019039228924761793_70203572671960'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__3019039228924761793_70203572671960'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.0ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.4ms)
+Started GET "/products" for ::1 at 2017-04-20 20:06:38 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (142.7ms)
+  Rendered partials/_navbar.html.erb (1.5ms)
+Completed 200 OK in 352ms (Views: 349.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/" for ::1 at 2017-04-20 20:06:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [19 times] (4.6ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.8ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.7ms)
+Started GET "/products" for ::1 at 2017-04-20 20:06:48 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  Rendered products/index.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<Photo::ActiveRecord_Associations_CollectionProxy:0x007fb31619a3e0>):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photos.url() %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__3019039228924761793_70203573503320'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__3019039228924761793_70203573503320'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.9ms)
+Started GET "/products" for ::1 at 2017-04-20 20:06:58 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  Rendered products/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<Photo::ActiveRecord_Associations_CollectionProxy:0x007fb3153c8d48>):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photos.url %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__3019039228924761793_70203597257060'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__3019039228924761793_70203597257060'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.8ms)
+Started GET "/products" for ::1 at 2017-04-20 20:08:55 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  Rendered products/index.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `uri' for #<Photo::ActiveRecord_Associations_CollectionProxy:0x007fb31adea790>):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photos.uri() %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__3019039228924761793_70203600160460'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__3019039228924761793_70203600160460'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.5ms)
+Started GET "/products" for ::1 at 2017-04-20 20:09:01 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  Rendered products/index.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<Photo::ActiveRecord_Associations_CollectionProxy:0x007fb3155c4250>):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photos.url() %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__3019039228924761793_70203612644200'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__3019039228924761793_70203612644200'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.2ms)
+Started GET "/products" for ::1 at 2017-04-20 20:09:46 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  Rendered products/index.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `images' for #<Photo:0x007fb31d337de0>
+Did you mean?  image
+               image?
+               image=):
+    14: 			  <tbody>
+    15: 			  	<% @products.each do |p| %>
+    16: 			  	<tr>
+    17: 			  		<td><%= image_tag p.photos[0].images.url() %></td>
+    18: 			  		<td><%= p.title %></td>
+    19: 			  		<td><%= truncate(p.description, length: 50) %></td>
+    20: 			  		<td><%= p.price %></td>
+  
+app/views/products/index.html.erb:17:in `block in _app_views_products_index_html_erb__3019039228924761793_70203565987440'
+app/views/products/index.html.erb:15:in `_app_views_products_index_html_erb__3019039228924761793_70203565987440'
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/web-dev/.rvm/gems/ruby-2.3.0@RoR5/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.1ms)
+Started GET "/products" for ::1 at 2017-04-20 20:09:50 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered products/index.html.erb within layouts/application (7.0ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-20 20:09:58 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered products/index.html.erb within layouts/application (8.6ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for ::1 at 2017-04-20 20:54:02 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered products/index.html.erb within layouts/application (8.5ms)
+  Rendered partials/_navbar.html.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 1.0ms)
+
+
