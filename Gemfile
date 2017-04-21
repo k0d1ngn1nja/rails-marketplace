@@ -12,10 +12,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem "paperclip", "~> 5.0.0"
 gem "font-awesome-rails"
+gem 'aws-sdk', '~> 2.3.0'
 
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'dotenv-rails'
 end
 
 group :development do
