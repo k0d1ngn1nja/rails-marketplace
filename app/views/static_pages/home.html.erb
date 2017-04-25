@@ -3,11 +3,12 @@
     <h1>Welcome to Rails Market Place</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
     
-    <%# unless user_signed_in? %>
-    <div style="margin-bottom: 20px;">
-    	<%#= link_to 'Signup', new_user_registration_path, class: 'btn btn-primary', :style => 'border-radius: 0' %>
-    </div>
-		<%# end %>
+    <% unless user_signed_in? %>
+	    <div style="margin-bottom: 20px; text-align: center;">
+	    	<%= link_to 'Signup', new_user_registration_path, class: 'btn btn-primary', :style => 'border-radius: 0' %>
+	    </div>
+		<% end %>
+
     <div class="progress">
 		  <div class="progress-bar progress-bar-success" style="width: 35%"></div>
 		  <div class="progress-bar progress-bar-warning" style="width: 20%"></div>

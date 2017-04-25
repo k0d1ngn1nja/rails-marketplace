@@ -1,4 +1,6 @@
 <%= form_for @product, html: {multipart: true} do |f| %>
+	<%= render 'partials/form_errors', obj: @product %>
+	
 	<div class="col-sm-6">
 		<div class="form-group">
 			<%= f.label :title, 'Product Name' %>
