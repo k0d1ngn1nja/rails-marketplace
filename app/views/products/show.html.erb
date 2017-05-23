@@ -12,8 +12,20 @@
 			<p><%= number_to_currency(@product.price) %></p>
 			<p><%= @product.description %></p>
 		</div><!--col6-->
-	</div>
+	</div><!--/row-->
+
 	<div class="row">
-		<%#= render 'photos/list' %>
+		<%= render 'photos/list' %>
+	</div><!--/row-->
+
+	<div class="row">
+		<div class="col-sm-12">
+			<p>
+			<% if (user_signed_in?) && (current_user == @product.user) %>
+				<%= link_to 'Edit', edit_product_path(@product) %> | 
+				<%= link_to 'Delete', @product, method: :delete, data: {confirm: 'Are you sure?'} %>
+			<% end %>
+			</p>
+		</div>
 	</div>
 </div>

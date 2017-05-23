@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_product, only: [:edit, :update, :show, :destroy]
+  before_action :check_user_permission, only: [:edit, :update, :destroy]
 
   def index
     @products = Product.all
@@ -64,5 +65,11 @@ class ProductsController < ApplicationController
 
     def product_params
       params.require(:product).permit(:title, :description, :price, :photo_id)
+    end
+
+    def check_user_permission
+      if current_user != @product.user
+        redirect_to root_url, alert: "You are cannot edit another user listing!".upcase
+      end
     end
 end
