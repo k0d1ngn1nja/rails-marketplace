@@ -37,6 +37,7 @@
 		        <span class="pull-right">
 		        	<%= number_to_currency(p.price) %>
 		        </span>
+		        <p><%="Sold By: #{p.user.username if p.user.present?}" %></p>
 		        <br>
 		      </div>
 		    </div>
