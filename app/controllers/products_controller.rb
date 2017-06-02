@@ -58,6 +58,10 @@ class ProductsController < ApplicationController
     redirect_to root_path
   end
 
+  def seller
+    @products = Product.where(user: current_user).order("created_at DESC")
+  end
+
   private
     def set_product
       @product = Product.find(params[:id])

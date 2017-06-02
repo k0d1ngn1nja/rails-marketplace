@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 class="page-header text-center">Products</h1>
+		</div>
+	</div><!--/row-->
+
+	<div class="row">
+		<% @products.each do |p| %>
+			<div class="col-sm-3">
+				<div class="thumbnail">
+		      <%= image_tag p.photos[0].image.url if p.photos.length > 0 %>
+		      <div class="caption">
+		        <h3><%= link_to p.title, p %></h3>
+		        <p><%= truncate(p.description, length: 70) %></p>
+		        <span class="pull-right">
+		        	<%= number_to_currency(p.price) %>
+		        </span>
+		        <p><%="Sold By: #{p.user.username if p.user.present?}" %></p>
+		        <br>
+		      </div>
+		    </div>
+			</div>
+		<% end %>
+	</div>
+</div>
